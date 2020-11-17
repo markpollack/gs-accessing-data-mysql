@@ -22,6 +22,6 @@ curl 'localhost:8080/demo/all'
 
 To add a user
 ```
-curl localhost:8080/demo/add -d name=First -d email=someemail@someemailprovider.com
+curl -X POST localhost:8080/demo/add -d name=First -d email=someemail@someemailprovider.com
 ```
 
