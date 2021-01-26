@@ -1,0 +1,9 @@
+command:
+  name: spring-mysql-jpa
+  description: Create a new project using Spring, JPA, and MySQL
+  options:
+    - name: wavefront
+      description: Add wavefront support
+      dataType: boolean
+      defaultValue: true
+      inputType: toggle
