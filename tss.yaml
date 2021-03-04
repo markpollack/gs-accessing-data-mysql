@@ -5,7 +5,7 @@ command:
     - name: use-test-containers
       description: Add Unit Test using Test Containers
       dataType: boolean
-      defaultValue: false
+      defaultValue: true
       inputType: toggle
 
 sources:
