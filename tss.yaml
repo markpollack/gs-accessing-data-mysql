@@ -2,8 +2,24 @@ command:
   name: new
   description: Create a new project using Spring, JPA, and MySQL
   options:
-    - name: wavefront
-      description: Add wavefront support
+    - name: use-test-containers
+      description: Add Unit Test using Test Containers
       dataType: boolean
-      defaultValue: true
+      defaultValue: false
       inputType: toggle
+
+sources:
+  include:
+    - name: everything
+      condition: true
+      patterns: [ '**/*' ]
+  exclude:
+    - name: test-container-filers
+      condition: "!#useTestContainers"
+      patterns: [ '**/*TestContainer*' ]
+    - name: hidden-files
+      condition: true
+      patterns:
+        - ".idea/**"
+        - ".git/**"
+        - "target/**"
