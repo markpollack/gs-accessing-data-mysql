@@ -23,3 +23,19 @@ sources:
         - ".idea/**"
         - ".git/**"
         - "target/**"
+
+symbols:
+  derived:
+    - name: camelCaseProjectName
+      expression: "#helper.camelCase(#projectName)"
+
+
+transformations:
+  replace:
+    - name: 'Replace - project creation time in version controller'
+      regex: '1 January 1970 00:00:00 UT'
+      with: '#now'
+    - name: 'Replace - project name in version controller'
+      regex: 'name-mysqlapp'
+      with: '#camelCaseProjectName'
+
