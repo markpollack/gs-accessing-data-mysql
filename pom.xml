@@ -45,13 +45,14 @@
 			</exclusions>
 		</dependency>
 
-		<!-- TO EVENTUALLY FILTER BASED ON GENERATOR OPTIONS -->
+		<!-- #if useTestContainers -->
 		<dependency>
 			<groupId>org.testcontainers</groupId>
 			<artifactId>testcontainers</artifactId>
 			<version>1.15.1</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- #endif -->
 		<dependency>
 			<groupId>org.testcontainers</groupId>
 			<artifactId>junit-jupiter</artifactId>
