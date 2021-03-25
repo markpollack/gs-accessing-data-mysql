@@ -9,6 +9,7 @@ command:
       inputType: toggle
 
 sources:
+  baseDirectory: "../../../"
   include:
     - name: everything
       condition: true
@@ -38,4 +39,7 @@ transformations:
     - name: 'Replace - project name in version controller'
       regex: 'name-mysqlapp'
       with: '#camelCaseProjectName'
-
+  renameJavaPackage:
+    - name: first refactoring
+      from: com.example.accessingdatamysql
+      to: com.vmware.spring.mysql
