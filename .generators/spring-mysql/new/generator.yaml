@@ -8,7 +8,7 @@ command:
       inputType: toggle
 
 sources:
-  baseDirectory: "../../../"
+  installFromRoot: true
   include:
     - name: everything
       condition: true
