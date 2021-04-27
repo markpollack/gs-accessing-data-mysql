@@ -9,6 +9,7 @@ command:
       inputType: toggle
 
 sources:
+  installFromRoot: true
   include:
     - name: everything
       condition: true
