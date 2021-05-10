@@ -34,9 +34,9 @@ symbols:
 transformations:
   replace:
     - name: 'Replace - project creation time in version controller'
-      regex: '1 January 1970 00:00:00 UT'
+      token: '1 January 1970 00:00:00 UT'
       with: '#now'
     - name: 'Replace - project name in version controller'
-      regex: 'name-mysqlapp'
+      token: 'name-mysqlapp'
       with: '#camelCaseProjectName'
 
